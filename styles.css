@@ -1,0 +1,48 @@
+body {
+    background-image: url('images/textura-cielo.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la página */
+    font-family: Arial, sans-serif; /* Estilo de fuente para el contenido de la página */
+    color: #fff; /* Color de texto para el contenido de la página */
+}
+.image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+            height: 100px; /* Ajusta la altura del contenedor */
+            border-radius: 5px; /* Añade bordes redondeados a la imagen */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra a la imagen */
+            overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño de la imagen */
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0; /* Oculta el botón inicialmente */
+            transition: opacity 0.3s ease; /* Agrega una transición para suavizar la aparición */
+        }
+
+        .image-container:hover .button-overlay {
+            opacity: 1; /* Muestra el botón cuando se pasa el ratón por encima de la imagen */
+        }
+
+        /* Estilos para el botón */
+        .button-overlay button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una ligera sombra al botón */
+        }
